@@ -34,8 +34,8 @@ The GSFOpenURL1.0.0 only have a little Chinese apps,So please told me more app�
   # s.public_header_files = "Classes/**/*.h"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.resource  = "白名单.plist"
-  # s.resources = "Resources/*.png"
+  # s.resource  = "GSFOpenURL/QueriesSchemes.plist"
+  s.resources = "GSFOpenURL/*.plist"
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

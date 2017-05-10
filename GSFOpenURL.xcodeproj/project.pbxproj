@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7CC088241EC1AFF400F1D772 /* GSFOpenURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC088221EC1AFF400F1D772 /* GSFOpenURL.m */; };
-		7CC088251EC1AFF400F1D772 /* 白名单.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CC088231EC1AFF400F1D772 /* 白名单.plist */; };
+		7CC088271EC2EDE100F1D772 /* 白名单.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CC088261EC2EDE100F1D772 /* 白名单.plist */; };
 		7CF0C5991EB881EE00BE3985 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0C5981EB881EE00BE3985 /* main.m */; };
 		7CF0C59C1EB881EE00BE3985 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0C59B1EB881EE00BE3985 /* AppDelegate.m */; };
 		7CF0C59F1EB881EE00BE3985 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0C59E1EB881EE00BE3985 /* ViewController.m */; };
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		7CC088211EC1AFF400F1D772 /* GSFOpenURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFOpenURL.h; sourceTree = "<group>"; };
 		7CC088221EC1AFF400F1D772 /* GSFOpenURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFOpenURL.m; sourceTree = "<group>"; };
-		7CC088231EC1AFF400F1D772 /* 白名单.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "白名单.plist"; sourceTree = "<group>"; };
+		7CC088261EC2EDE100F1D772 /* 白名单.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "白名单.plist"; sourceTree = "<group>"; };
 		7CF0C5941EB881EE00BE3985 /* GSFOpenURL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSFOpenURL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF0C5981EB881EE00BE3985 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7CF0C59A1EB881EE00BE3985 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 			children = (
 				7CC088211EC1AFF400F1D772 /* GSFOpenURL.h */,
 				7CC088221EC1AFF400F1D772 /* GSFOpenURL.m */,
-				7CC088231EC1AFF400F1D772 /* 白名单.plist */,
+				7CC088261EC2EDE100F1D772 /* 白名单.plist */,
 			);
 			path = GSFOpenURL;
 			sourceTree = "<group>";
@@ -265,9 +265,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CC088271EC2EDE100F1D772 /* 白名单.plist in Resources */,
 				7CF0C5A71EB881EE00BE3985 /* LaunchScreen.storyboard in Resources */,
 				7CF0C5A41EB881EE00BE3985 /* Assets.xcassets in Resources */,
-				7CC088251EC1AFF400F1D772 /* 白名单.plist in Resources */,
 				7CF0C5A21EB881EE00BE3985 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
