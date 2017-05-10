@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>拷贝下面的到info.plist</key>
+	<string>下面的是info里的一个key 里面的数组元素是本项目里所包含的相应的白名单</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+        <!--系统跳转不需要白名单-->
+        <!--社交-->
+		<string>mqq</string>
+		<string>mqqiapi</string>
+		<string>weixin</string>
+		<string>sinaweibo</string>
+        <string>renren</string>
+        <!--地图-->
+        <string>iosamap</string>
+		<string>baidumap</string>
+        <!--花钱-->
+		<string>alipay</string>
+		<string>openApp.jdMobile</string>
+		<string>openApp.jdiPad</string>
+		<string>taobao</string>
+		<string>taobaohd</string>
+		<string>tmall</string>
+		<string>imeituan</string>
+		<string>iMeituan</string>
+		<string>dianping</string>
+		<string>dianpinghd</string>
+		<string>bainuo</string>
+        <!--银行-->
+		<string>wx1cb534bb13ba3dbd</string>
+		<string>com.icbc.iphoneclient</string>
+		<string>wx2654d9155d70a468</string>
+		<string>cmbmobilebank</string>
+        <!--视频-->
+		<string>bilibili</string>
+		<string>youku</string>
+		<string>youkuhd</string>
+		<string>pptv</string>
+		<string>ppstream</string>
+		<string>qiyi-iphone</string>
+		<string>doubanradio</string>
+        <!--音乐-->
+        <string>QQmusic</string>
+        <string>com.kuwo.kwmusic.kwmusicForKwsing</string>
+        <string>kugouURL</string>
+        <string>KingsoftOfficeApp</string>
+        <string>thunder</string>
+        <string>baiduyun</string>
+        <string>sinavdisk</string>
+        </array>
+</dict>
+</plist>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="@param path (参数 path)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l3k-5t-6hS">
+                                <rect key="frame" x="16" y="46" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyR-qN-Pzz">
+                                <rect key="frame" x="59" y="158" width="257" height="30"/>
+                                <state key="normal" title="openURL (GSFOpenURLTypeCustom)"/>
+                                <connections>
+                                    <action selector="openURLButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P9p-H1-dN6"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="@param URLString (用safari打开时的链接)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUC-XG-fmG">
+                                <rect key="frame" x="16" y="102" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zF0-Ib-dlK">
+                                <rect key="frame" x="84.5" y="210" width="206" height="30"/>
+                                <state key="normal" title="openURL Type setting in code"/>
+                                <connections>
+                                    <action selector="openURLSttingCodeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wb6-sy-QGz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mUC-XG-fmG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2Y8-Dv-Xgr"/>
+                            <constraint firstItem="l3k-5t-6hS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="7ub-1z-eFh"/>
+                            <constraint firstItem="VyR-qN-Pzz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ByW-6y-kW2"/>
+                            <constraint firstItem="mUC-XG-fmG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FUB-HA-xL1"/>
+                            <constraint firstItem="l3k-5t-6hS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Q8T-7L-3Zs"/>
+                            <constraint firstItem="VyR-qN-Pzz" firstAttribute="top" secondItem="mUC-XG-fmG" secondAttribute="bottom" constant="26" id="RKw-aV-fgv"/>
+                            <constraint firstItem="l3k-5t-6hS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TfM-nr-ZZF"/>
+                            <constraint firstItem="zF0-Ib-dlK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YTY-qm-UGj"/>
+                            <constraint firstItem="mUC-XG-fmG" firstAttribute="top" secondItem="l3k-5t-6hS" secondAttribute="bottom" constant="26" id="kP0-Se-PoZ"/>
+                            <constraint firstItem="zF0-Ib-dlK" firstAttribute="top" secondItem="VyR-qN-Pzz" secondAttribute="bottom" constant="22" id="yFz-e3-5Ib"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="openURLTextField" destination="l3k-5t-6hS" id="18R-tj-VAX"/>
+                        <outlet property="webURLTextField" destination="mUC-XG-fmG" id="Mbl-1j-Z8P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
