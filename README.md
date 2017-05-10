@@ -5,7 +5,7 @@ iOS OpenURL 整理了一些常用的
 <pre><code>
    pod 'GSFOpenURL'
 </code></pre>
-
+-------------------------
 调用示例和说明:
 <pre><code>
     NSInteger success = [GSFOpenURL OpenAPPWithOpenURLHeaderType:GSFOpenURLTypeMaps withPath:^NSString *{
