@@ -2,11 +2,13 @@
 iOS OpenURL 整理了一些常用的
 
 已经支持cocoapods 
-   pod 'GSFOpenURL'
+   * pod 'GSFOpenURL'
 
 
-    * 调用示例和说明:
-    NSInteger success = [GSFOpenURL OpenAPPWithOpenURLHeaderType:GSFOpenURLTypeMaps withPath:^NSString *{
+
+
+调用示例和说明:
+    *NSInteger success = [GSFOpenURL OpenAPPWithOpenURLHeaderType:GSFOpenURLTypeMaps withPath:^NSString *{
         /** 如果需要拼接字符串可以在此处处理
          * 注意!
          * 返回 @"":表示传递空字符串; nil:(null)
@@ -23,9 +25,11 @@ iOS OpenURL 整理了一些常用的
         return @"not do";
     }];
     NSLog(@"是否完成:%zd",success);// 0:跳转失败 1:跳转的APP 2:跳转的网页
-    «««««««««««««««««««««««««««««««««««««««««««««««««««««««««
-    * iOS10新方法 options尚在研究中 如果你知道什么可以告诉我
-    [GSFOpenURL OpenAPPWithOpenURLHeaderType:GSFOpenURLTypePhone withPath:^NSString *{
+    
+-----------------------------------
+    
+ iOS10新方法 options尚在研究中 如果你知道什么可以告诉我
+    *[GSFOpenURL OpenAPPWithOpenURLHeaderType:GSFOpenURLTypePhone withPath:^NSString *{
         // 同上
         return self.openURLTextField.text;
     } option:^NSDictionary<NSString *,id> *{
@@ -42,5 +46,4 @@ iOS OpenURL 整理了一些常用的
     } completionHandler:^(NSInteger success) {
         NSLog(@"是否完成:%zd",success);// 0:跳转失败 1:跳转的APP 2:跳转的网页
     }];
-    «««««««««««««««««««««««««««««««««««««««««««««««««««««««««
 
