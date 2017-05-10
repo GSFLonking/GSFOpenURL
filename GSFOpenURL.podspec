@@ -29,17 +29,17 @@ The GSFOpenURL1.0.0 only have a little Chinese apps,So please told me more app�
   s.source       = { :git => "https://github.com/GSFLonking/GSFOpenURL.git", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source_files  = "GSFOpenURL", "Classes/**/*.{h,m}"
+  s.source_files  = "GSFOpenURL", "GSFOpenURL/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
   # s.public_header_files = "Classes/**/*.h"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  # s.resource  = "icon.png"
+  s.resource  = "白名单.plist"
   # s.resources = "Resources/*.png"
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  s.frameworks = "UIKit"
   # s.libraries = "iconv", "xml2"
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
