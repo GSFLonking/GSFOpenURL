@@ -1,6 +1,10 @@
 # GSFOpenURL
 iOS OpenURL 整理了一些常用的
 
+已经支持cocoapods 
+   pod 'GSFOpenURL'
+
+
     * 调用示例和说明:
     NSInteger success = [GSFOpenURL OpenAPPWithOpenURLHeaderType:GSFOpenURLTypeMaps withPath:^NSString *{
         /** 如果需要拼接字符串可以在此处处理
