@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "GSFOpenURL"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "You can use GSFOpenURL to open some apps by enum type,If we add it’s URL Schemes"
   s.description  = <<-DESC
 	You can use GSFOpenURL to open some apps by enum type,If we add it’s URL Schemes.
@@ -29,7 +29,7 @@ The GSFOpenURL1.0 only have a little Chinese apps,So please told me more app’s
   s.source       = { :git => "https://github.com/GSFLonking/GSFOpenURL.git", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source_files  = "GSFOpenURL", "GSFOpenURL/GSFOpenURL/*.{h,m}"
+  s.source_files  = "GSFOpenURL/GSFOpenURL/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
   # s.public_header_files = "Classes/**/*.h"
 
