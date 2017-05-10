@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "GSFOpenURL"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "You can use GSFOpenURL to open some apps by enum type,If we add it’s URL Schemes"
   s.description  = <<-DESC
 	You can use GSFOpenURL to open some apps by enum type,If we add it’s URL Schemes.
 If you know some other apps URL Schemes,you can tell me,like bank app.
-The GSFOpenURL1.0.0 only have a little Chinese apps,So please told me more app’s URL Schemes,Let me improve it.
+The GSFOpenURL1.0 only have a little Chinese apps,So please told me more app’s URL Schemes,Let me improve it.
                    DESC
   s.homepage     = "https://github.com/GSFLonking/GSFOpenURL"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -29,13 +29,13 @@ The GSFOpenURL1.0.0 only have a little Chinese apps,So please told me more app�
   s.source       = { :git => "https://github.com/GSFLonking/GSFOpenURL.git", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source_files  = "GSFOpenURL", "GSFOpenURL/**/*.{h,m}"
+  s.source_files  = "GSFOpenURL", "GSFOpenURL/GSFOpenURL/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
   # s.public_header_files = "Classes/**/*.h"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  # s.resource  = "GSFOpenURL/QueriesSchemes.plist"
-  s.resources = "GSFOpenURL/*.plist"
+  s.resource  = "GSFOpenURL/GSFOpenURL/白名单.plist"
+  # s.resources = "GSFOpenURL/GSFOpenURL/*.plist"
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
