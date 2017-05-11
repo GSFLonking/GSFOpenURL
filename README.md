@@ -9,7 +9,7 @@ iOS OpenURL 整理了一些常用的
 <pre><code>NSInteger success = [GSFOpenURL OpenAPPWithOpenURLHeaderType:GSFOpenURLTypeMaps withPath:^NSString *{
         /** 如果需要拼接字符串可以在此处处理
          * 注意!
-         * 返回 @"":表示传递空字符串; nil:(null)
+         * 返回 @"":表示传递空字符串; nil:不跳转APP
          * path这个block = nil 那么效果等同于@"" 如下面
          */
         return @"";
