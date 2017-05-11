@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "GSFOpenURL"
-  s.version      = "1.0.2"
+  s.version      = "1.1.0"
   s.summary      = "You can use GSFOpenURL to open some apps by enum type,If we add it’s URL Schemes"
   s.description  = <<-DESC
 	You can use GSFOpenURL to open some apps by enum type,If we add it’s URL Schemes.

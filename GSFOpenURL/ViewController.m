@@ -31,21 +31,20 @@
 
 - (IBAction)openURLButton:(UIButton *)sender {
 //    * 调用示例和说明:
-//    NSInteger success = [GSFOpenURL OpenAPPWithOpenURLHeaderType:GSFOpenURLTypeMaps withPath:^NSString *{
+//    NSInteger success = [GSFOpenURL OpenAPPWithOpenURLHeaderType:GSFOpenURLTypeJingDong withPath:^NSString *{
 //        /** 如果需要拼接字符串可以在此处处理
 //         * 注意!
 //         * 返回 @"":表示传递空字符串; nil:(null)
-//         * path这个block = nil 那么效果等同于@"" 如下面
+//         * path这个block = nil 那么效果等同于 return @"" 如下面
 //         */
 //        return @"";
 //    } ifCantAPPOpenSafariURLString:^NSString *{
 //        /** 如果需要拼接字符串可以在此处处理
 //         * 注意!
-//         * 返回 @"":表示传递空字符串; nil:(null)
-//         * @"not do" 表示当打开失败的时候不再尝试用safari打开
+//         * 返回 @"":表示传递空字符串; nil:表示当打开失败的时候不再尝试用safari打开
 //         * URLString这个block = nil 那么尝试对path返回的string前面拼接"http://"是否能打开
 //         */
-//        return @"not do";
+//        return nil;
 //    }];
 //    «««««««««««««««««««««««««««««««««««««««««««««««««««««««««
 //    * iOS10新方法 options尚在研究中 如果你知道什么可以告诉我
@@ -60,7 +59,7 @@
 //         */
 //        return options;
 //    } ifCantAPPOpenSafariURLString:^NSString *{
-//        return @"not do";
+//        return nil;
 //    } completionHandler:^(NSInteger success) {
 //        NSLog(@"是否完成:%zd",success);
 //    }];
@@ -84,7 +83,7 @@
     } ifCantAPPOpenSafariURLString:^NSString *{
         return self.webURLTextField.text;
     }];
-//    两个都传nil的情况 (不建议如此
+//    两个都传nil的情况 
 //    NSInteger success = [GSFOpenURL OpenAPPWithOpenURLHeaderType:GSFOpenURLTypeMaps withPath:nil ifCantAPPOpenSafariURLString:nil];
     NSLog(@"是否完成:%zd",success);
 }

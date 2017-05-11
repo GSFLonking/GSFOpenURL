@@ -82,7 +82,7 @@ typedef enum : NSUInteger {
 
  @param headerType 根据enum判断指定的openURL前缀是什么
  @param path 返回除去前缀的路径 自定义类型加上前缀 如需处理拼接字符串可在这个block里写 部分系统跳转直接传nil
- @param URLString 如果path前缀拼接"http://"不是网页地址的话请返回跳转的绝对地址 是的话用nil 如果需要自处理没有安装APP的情况请输入:@"not do"
+ @param URLString 如果path前缀拼接"http://"不是网页地址的话请返回跳转的绝对地址 是的话用nil 如果需要自处理没有安装APP的情况 return nil
  @return 0:跳转失败 1:跳转的APP 2:跳转的网页
  */
 + (NSInteger)OpenAPPWithOpenURLHeaderType:(GSFOpenURLType)headerType withPath:(NSString *(^)())path ifCantAPPOpenSafariURLString:(NSString *(^)())URLString NS_DEPRECATED_IOS(2_0, 10_0, "Please use OpenAPPWithOpenURLHeaderType:withPath:options:ifCantAPPOpenSafariURLString:completionHandler: instead") NS_EXTENSION_UNAVAILABLE_IOS("");
@@ -94,7 +94,7 @@ typedef enum : NSUInteger {
  @param headerType 根据enum判断指定的openURL前缀是什么
  @param path 返回除去前缀的路径 自定义类型加上前缀 如需处理拼接字符串可在这个block里写 部分系统跳转直接传nil
  @param option 返回 iOS10新方法的options的字典
- @param URLString 如果path前缀拼接"http://"不是网页地址的话请返回跳转的绝对地址 是的话用nil 如果需要自处理没有安装APP的情况请输入:@"not do"
+ @param URLString 如果path前缀拼接"http://"不是网页地址的话请返回跳转的绝对地址 是的话用nil 如果需要自处理没有安装APP的情况 return nil
  @param completion 0:跳转失败 1:跳转的APP 2:跳转的网页
  */
 + (void)OpenAPPWithOpenURLHeaderType:(GSFOpenURLType)headerType withPath:(NSString *(^)())path option:(NSDictionary<NSString *, id> * (^)())option ifCantAPPOpenSafariURLString:(NSString *(^)())URLString completionHandler:(void (^)(NSInteger success))completion  NS_AVAILABLE_IOS(10_0) NS_EXTENSION_UNAVAILABLE_IOS("");
