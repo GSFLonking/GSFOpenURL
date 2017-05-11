@@ -34,7 +34,7 @@
 //    NSInteger success = [GSFOpenURL OpenAPPWithOpenURLHeaderType:GSFOpenURLTypeJingDong withPath:^NSString *{
 //        /** 如果需要拼接字符串可以在此处处理
 //         * 注意!
-//         * 返回 @"":表示传递空字符串; nil:(null)
+//         * 返回 @"":表示传递空字符串; nil:不跳转APP
 //         * path这个block = nil 那么效果等同于 return @"" 如下面
 //         */
 //        return @"";
@@ -83,7 +83,7 @@
     } ifCantAPPOpenSafariURLString:^NSString *{
         return self.webURLTextField.text;
     }];
-//    两个都传nil的情况 
+//    两个都传nil的情况 一定是什么都没走 和 Path:nil SafariURLString:@"" 是一样的效果 但是和 type!=GSFOpenURLTypeCustom  path:@""  SafariURLString:nil/@"" 是不一样的效果
 //    NSInteger success = [GSFOpenURL OpenAPPWithOpenURLHeaderType:GSFOpenURLTypeMaps withPath:nil ifCantAPPOpenSafariURLString:nil];
     NSLog(@"是否完成:%zd",success);
 }

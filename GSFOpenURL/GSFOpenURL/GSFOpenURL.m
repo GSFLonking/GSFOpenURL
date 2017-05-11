@@ -13,7 +13,7 @@
  用openURL跳转到指定应用
  
  @param headerType 根据enum判断指定的openURL前缀是什么
- @param path 返回除去前缀的路径 自定义类型加上前缀 如需处理拼接字符串可在这个block里写 部分系统跳转直接传nil
+ @param path 返回除去前缀的路径 自定义类型加上前缀 如需处理拼接字符串可在这个block里写 return nil:不跳转APP
  @param URLString 如果path前缀拼接"https://"不是网页地址的话请返回跳转的绝对地址 是的话用nil 如果需要自处理没有安装APP的情况 return nil
  @return 0:跳转失败 1:跳转的APP 2:跳转的网页
  */
@@ -21,7 +21,7 @@
     NSString *headerString = [self swichHeaderType:headerType];
     NSString *pathString = path ? path() : @"";
     NSString *openURL = [NSString stringWithFormat:@"%@%@",headerString,pathString];
-    if ([[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:openURL]]) {
+    if (pathString && [[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:openURL]]) {
         return [[UIApplication sharedApplication]openURL:[NSURL URLWithString:openURL]];
     }
     if (!URLString){
@@ -45,17 +45,17 @@
  用openURL:options:completionHandler:跳转到指定应用
  
  @param headerType 根据enum判断指定的openURL前缀是什么
- @param path 返回除去前缀的路径 自定义类型加上前缀 如需处理拼接字符串可在这个block里写 部分系统跳转直接传nil
+ @param path 返回除去前缀的路径 自定义类型加上前缀 如需处理拼接字符串可在这个block里写 return nil:不跳转APP
  @param option 返回 iOS10新方法的options
  @param URLString 如果path前缀拼接"https://"不是网页地址的话请返回跳转的绝对地址 是的话用nil 如果需要自处理没有安装APP的情况 return nil
  @param completion 0:跳转失败 1:跳转的APP 2:跳转的网页
  */
 + (void)OpenAPPWithOpenURLHeaderType:(GSFOpenURLType)headerType withPath:(NSString *(^)())path option:(NSDictionary<NSString *,id> * (^)())option ifCantAPPOpenSafariURLString:(NSString *(^)())URLString completionHandler:(void (^)(NSInteger))completion{
     NSString *headerString = [self swichHeaderType:headerType];
-    NSString *pathString = path();
+    NSString *pathString = path ? path() : @"";
     NSDictionary<NSString *,id> *options = option ? option() : nil;
     NSString *openURL = [NSString stringWithFormat:@"%@%@",headerString,pathString];
-    if ([[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:openURL]]) {        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:openURL]options:options completionHandler:^(BOOL success) {
+    if (pathString && [[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:openURL]]) {        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:openURL]options:options completionHandler:^(BOOL success) {
             completion(success);
         }];
         return;
